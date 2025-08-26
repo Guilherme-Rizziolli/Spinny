@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spinny — Robôs fofos que adoçam o futuro</title>
+  <meta name="description" content="Spinny — robôs fofos que preparam algodão doce com tecnologia e encanto. Perfeito para festas, eventos e ativações." />
+  <!-- Tailwind Play CDN (bom para protótipos e sites simples) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Pequenos ajustes visuais */
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white via-rose-50/40 to-sky-50/40 text-slate-800">
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 glass border-b border-slate-200/50">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between py-3 px-6 md:px-10">
+      <a href="#top" class="flex items-center gap-3">
+        <!-- Mascot mini -->
+        <svg viewBox="0 0 256 256" class="w-10 h-10" role="img" aria-label="Mascote Spinny">
+          <defs>
+            <radialGradient id="puff" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#ffd1ea"/>
+              <stop offset="70%" stop-color="#ff9ad0"/>
+              <stop offset="100%" stop-color="#ff78c1"/>
+            </radialGradient>
+            <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#86f7ff"/>
+              <stop offset="100%" stop-color="#25d0ff"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="128" cy="202" rx="64" ry="18" fill="#000" opacity="0.12"/>
+          <path d="M60 120c0-36 30-64 68-64s68 28 68 64c0 32-24 52-56 58v12c0 9-7 16-16 16s-16-7-16-16v-12c-32-6-48-26-48-58z" fill="url(#puff)" stroke="#2d2442" stroke-width="8" stroke-linejoin="round"/>
+          <circle cx="112" cy="120" r="6" fill="#2d2442"/>
+          <circle cx="152" cy="120" r="6" fill="#2d2442"/>
+          <path d="M112 144c8 10 24 10 32 0" stroke="#2d2442" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M128 44v16" stroke="#2d2442" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="128" cy="36" r="8" fill="#ff9ad0" stroke="#2d2442" stroke-width="5"/>
+          <rect x="92" y="168" width="72" height="36" rx="18" fill="#b7a7ff" stroke="#2d2442" stroke-width="6"/>
+          <path d="M40 172c16-16 96-28 176-8" fill="none" stroke="url(#ring)" stroke-width="12" stroke-linecap="round"/>
+        </svg>
+        <span class="text-xl font-extrabold tracking-tight">Spinny</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#sobre" class="hover:text-slate-900 text-slate-600">Sobre</a>
+        <a href="#produtos" class="hover:text-slate-900 text-slate-600">Produtos</a>
+        <a href="#diferenciais" class="hover:text-slate-900 text-slate-600">Diferenciais</a>
+        <a href="#segmentos" class="hover:text-slate-900 text-slate-600">Segmentos</a>
+        <a href="#contato" class="hover:text-slate-900 text-slate-600">Contato</a>
+        <a href="#orcamento" class="inline-block rounded-2xl bg-sky-600 text-white px-4 py-2">Pedir Orçamento</a>
+      </div>
+
+      <!-- mobile menu toggle -->
+      <button id="mobileToggle" class="md:hidden p-2 rounded-lg text-slate-700" aria-label="Abrir menu">
+        ☰
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="relative">
+    <section class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center py-20 px-6 md:px-10">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          Robôs fofos que <span class="bg-gradient-to-r from-pink-500 to-sky-500 bg-clip-text text-transparent">adoçam o futuro</span>
+        </h1>
+        <p class="mt-5 text-lg text-slate-600 max-w-xl">
+          A Spinny cria robôs inteligentes e carismáticos que preparam algodão doce com perfeição. Tecnologia, diversão e encantamento em cada fio de açúcar.
+        </p>
+
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#orcamento" class="rounded-2xl bg-sky-600 text-white px-4 py-2 inline-flex items-center gap-2">
+            🚀 Quero no meu evento
+          </a>
+          <a href="#produtos" class="rounded-2xl border border-slate-200 px-4 py-2 inline-flex items-center gap-2 text-slate-700">
+            🍬 Conhecer produtos
+          </a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-6 text-sm text-slate-600">
+          <div class="flex items-center gap-2">🔒 Seguro e higiênico</div>
+          <div class="flex items-center gap-2">🌱 Baixo consumo</div>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <!-- Mascot large -->
+        <svg viewBox="0 0 256 256" class="w-[22rem] h-[22rem]" role="img" aria-label="Mascote Spinny grande">
+          <defs>
+            <radialGradient id="puff2" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#ffd1ea"/>
+              <stop offset="70%" stop-color="#ff9ad0"/>
+              <stop offset="100%" stop-color="#ff78c1"/>
+            </radialGradient>
+            <linearGradient id="ring2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#86f7ff"/>
+              <stop offset="100%" stop-color="#25d0ff"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="128" cy="202" rx="64" ry="18" fill="#000" opacity="0.12"/>
+          <path d="M60 120c0-36 30-64 68-64s68 28 68 64c0 32-24 52-56 58v12c0 9-7 16-16 16s-16-7-16-16v-12c-32-6-48-26-48-58z" fill="url(#puff2)" stroke="#2d2442" stroke-width="8" stroke-linejoin="round"/>
+          <circle cx="112" cy="120" r="9" fill="#2d2442"/>
+          <circle cx="152" cy="120" r="9" fill="#2d2442"/>
+          <path d="M112 144c8 10 24 10 32 0" stroke="#2d2442" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M128 44v16" stroke="#2d2442" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="128" cy="36" r="10" fill="#ff9ad0" stroke="#2d2442" stroke-width="6"/>
+          <rect x="92" y="168" width="72" height="36" rx="18" fill="#b7a7ff" stroke="#2d2442" stroke-width="8"/>
+          <path d="M40 172c16-16 96-28 176-8" fill="none" stroke="url(#ring2)" stroke-width="14" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-16 px-6 md:px-10 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-extrabold mb-3">Sobre a Spinny</h2>
+      <p class="text-slate-700 leading-relaxed mb-4">Somos uma empresa de robótica voltada ao entretenimento gastronômico. Nossos robôs foram criados para transformar o preparo de algodão doce em um espetáculo visual, seguro e interativo. Com design amigável, automação avançada e controle inteligente, entregamos uma experiência inesquecível para pessoas de todas as idades.</p>
+      <p class="text-slate-700 leading-relaxed">Prezamos por eficiência: alta produtividade com padronização de textura e sabor, fácil limpeza e operação simplificada. Engenharia, design e diversão combinados para o seu evento ou negócio.</p>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="py-16 px-6 md:px-10 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-extrabold mb-3">Produtos</h2>
+      <p class="text-slate-600 mb-6">Escolha a experiência que combina com você.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+          <h3 class="font-semibold text-lg mb-2">Spinny One</h3>
+          <p class="text-slate-600 text-sm">Robô compacto para eventos e festas. Produz até 120 porções/h, com animações LED e interação por toque.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+          <h3 class="font-semibold text-lg mb-2">Spinny Pro</h3>
+          <p class="text-slate-600 text-sm">Versão profissional para parques e centros de lazer. Alta vazão, monitoramento por app e presets de receitas.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+          <h3 class="font-semibold text-lg mb-2">Spinny Show</h3>
+          <p class="text-slate-600 text-sm">Experiência-show com coreografias de luz, narração e pequenos efeitos visuais para ativações de marca.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="py-16 px-6 md:px-10 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-extrabold mb-3">Diferenciais</h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div class="p-6 bg-white rounded-2xl border border-slate-100">
+          <h4 class="font-semibold mb-2">Higiene & Segurança</h4>
+          <p class="text-slate-600 text-sm">Fluxo fechado de açúcar, proteção térmica e materiais de grau alimentar.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-100">
+          <h4 class="font-semibold mb-2">Sustentável</h4>
+          <p class="text-slate-600 text-sm">Baixo consumo energético, insumos otimizados e peças duráveis.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-100">
+          <h4 class="font-semibold mb-2">Rápido & Escalável</h4>
+          <p class="text-slate-600 text-sm">Início em segundos, produção constante e operação multi-ponto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segmentos -->
+    <section id="segmentos" class="py-16 px-6 md:px-10 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-extrabold mb-3">Segmentos atendidos</h2>
+      <ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6 text-slate-700">
+        <li class="p-4 bg-white rounded-xl border border-slate-100">Festas infantis e aniversários</li>
+        <li class="p-4 bg-white rounded-xl border border-slate-100">Casamentos e formaturas</li>
+        <li class="p-4 bg-white rounded-xl border border-slate-100">Parques e centros de lazer</li>
+        <li class="p-4 bg-white rounded-xl border border-slate-100">Eventos corporativos</li>
+        <li class="p-4 bg-white rounded-xl border border-slate-100">Ativações de marca</li>
+        <li class="p-4 bg-white rounded-xl border border-slate-100">Experiências gastronômicas</li>
+      </ul>
+    </section>
+
+    <!-- Orcamento / CTA -->
+    <section id="orcamento" class="py-16 px-6 md:px-10 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-extrabold mb-3">Leve a Spinny para o seu evento!</h2>
+      <p class="text-slate-600 mb-6">Peça um orçamento rápido e personalizado.</p>
+
+      <div class="bg-white rounded-2xl border border-slate-100 p-6 md:p-10 grid md:grid-cols-2 gap-8">
+        <form id="orcamentoForm" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Nome</label>
+            <input id="nome" class="w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-400" placeholder="Seu nome" required />
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium mb-1">E-mail</label>
+              <input id="email" type="email" class="w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-400" placeholder="voce@exemplo.com" required />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1">Telefone/WhatsApp</label>
+              <input id="telefone" class="w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-400" placeholder="(00) 90000-0000" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Cidade / Estado</label>
+            <input id="cidade" class="w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-400" placeholder="Ex.: São Paulo/SP" />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1">Detalhes do evento</label>
+            <textarea id="detalhes" rows="4" class="w-full rounded-xl border border-slate-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-400" placeholder="Data, número de pessoas, tipo de evento…" required></textarea>
+          </div>
+
+          <button type="submit" class="rounded-2xl bg-sky-600 text-white px-6 py-3 w-full md:w-auto">Enviar pedido</button>
+          <p class="text-xs text-slate-500">Ao enviar, você concorda com nossa política de privacidade.</p>
+        </form>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="text-2xl">🔒</div>
+            <p class="text-slate-600">Operação segura e higiênica, com equipe treinada e insumos de qualidade alimentar.</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="text-2xl">🤖</div>
+            <p class="text-slate-600">Robôs com design fofo e futurista que encantam crianças e adultos.</p>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="text-2xl">🍬</div>
+            <p class="text-slate-600">Receitas personalizáveis: cores, formatos e estilos para combinar com o seu tema.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 px-6 md:px-10 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-extrabold mb-3">Fale com a gente</h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div class="p-6 bg-white rounded-2xl border border-slate-100 flex items-center gap-3">📞 (00) 90000-0000</div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-100 flex items-center gap-3">✉️ contato@spinny.com</div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-100 flex items-center gap-3">📍 Atendimento Brasil</div>
+      </div>
+
+      <div class="flex items-center gap-4 mt-6 text-slate-600">
+        <a href="#" class="inline-flex items-center gap-2 hover:text-slate-900">Instagram</a>
+        <a href="#" class="inline-flex items-center gap-2 hover:text-slate-900">Facebook</a>
+        <a href="#" class="inline-flex items-center gap-2 hover:text-slate-900">WhatsApp</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200/60 py-10">
+    <div class="max-w-6xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <!-- mascot mini -->
+        <svg viewBox="0 0 256 256" class="w-8 h-8">
+          <defs><radialGradient id="p1" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#ffd1ea"/><stop offset="70%" stop-color="#ff9ad0"/><stop offset="100%" stop-color="#ff78c1"/></radialGradient></defs>
+          <path d="M60 120c0-36 30-64 68-64s68 28 68 64c0 32-24 52-56 58v12c0 9-7 16-16 16s-16-7-16-16v-12c-32-6-48-26-48-58z" fill="url(#p1)" stroke="#2d2442" stroke-width="6" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-semibold">Spinny</span>
+      </div>
+
+      <p class="text-slate-500">© <span id="year"></span> Spinny. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile menu (hidden) -->
+  <div id="mobileMenu" class="fixed inset-0 bg-black/30 z-50 hidden">
+    <div class="bg-white h-full w-64 p-6">
+      <button id="closeMobile" class="mb-6">Fechar ✕</button>
+      <nav class="flex flex-col gap-3 text-slate-700">
+        <a href="#sobre" class="py-2">Sobre</a>
+        <a href="#produtos" class="py-2">Produtos</a>
+        <a href="#diferenciais" class="py-2">Diferenciais</a>
+        <a href="#segmentos" class="py-2">Segmentos</a>
+        <a href="#contato" class="py-2">Contato</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Atualiza ano do footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form behaviour (exemplo básico). Aqui você pode integrar com sua API ou serviço de e-mail.
+    document.getElementById('orcamentoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const cidade = document.getElementById('cidade').value.trim();
+      const detalhes = document.getElementById('detalhes').value.trim();
+
+      if (!nome || !email || !detalhes) {
+        alert('Por favor, preencha os campos obrigatórios: Nome, E-mail e Detalhes do evento.');
+        return;
+      }
+
+      // exemplo simples: compõe um e-mail via mailto (abre cliente do usuário)
+      const subject = encodeURIComponent('Pedido de Orçamento - Spinny');
+      const body = encodeURIComponent(
+        `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nCidade: ${cidade}\n\nDetalhes:\n${detalhes}`
+      );
+      window.location.href = `mailto:contato@spinny.com?subject=${subject}&body=${body}`;
+    });
+
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMobile = document.getElementById('closeMobile');
+    mobileToggle?.addEventListener('click', () => { mobileMenu.classList.remove('hidden'); });
+    closeMobile?.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+    // Close when clicking outside the panel
+    mobileMenu?.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) mobileMenu.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
